@@ -1,7 +1,23 @@
-echo "# DS" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/doms5/DS.git
-git push -u origin main
+print("Calculate the cost of installing fiber optic cable")
+
+Company_name = input("What is the company name: ")
+
+install_feet = float(input("How many feet(ft): "))
+
+cost_per_foot = 0.87
+
+if install_feet > 500:
+    cost_per_foot = 0.50
+elif install_feet > 250:
+    cost_per_foot = 0.70
+elif install_feet > 100:
+    cost_per_foot = 0.80
+else:
+    cost_per_foot = 0.87
+
+total_cost = install_feet * cost_per_foot
+
+print('\nResults: ')
+print("Company Name:", Company_name)
+print("Feet of fiber optic cable to be installed:", install_feet)
+print("Total Cost: $", total_cost)
